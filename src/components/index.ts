@@ -2,6 +2,7 @@ import Footer from './Footer';
 import Header from './Header';
 import HeroSection from './HeroSection';
 import SiteLogo from './SiteLogo';
+import ThemeToggler from './ThemeToggler';
 
 
 
@@ -10,4 +11,5 @@ export {
     Header,
     HeroSection,
     SiteLogo,
+    ThemeToggler,
 }

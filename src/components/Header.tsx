@@ -8,6 +8,7 @@ import { siteConfig } from '@/lib/site-config';
 import { BiMenu } from 'react-icons/bi';
 import { IoClose } from 'react-icons/io5';
 import SiteLogo from './SiteLogo';
+import ThemeToggler from './ThemeToggler';
 
 
 const Header: React.FC = () => {
@@ -47,8 +48,7 @@ const Header: React.FC = () => {
     return (
         <header
             ref={headerRef}
-            className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-all duration-300 ease-in-out ${isScrolling ? '-translate-y-full' : 'translate-y-0'
-                }`}
+            className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-all duration-300 ease-in-out ${isScrolling ? '-translate-y-full' : 'translate-y-0'} dark:bg-black`}
         >
             <div className="px-4 lg:px-32 xl:px-40 flex justify-between items-center">
                 <Link href={siteConfig.links.home} className="flex items-center space-x-2">
@@ -59,11 +59,14 @@ const Header: React.FC = () => {
                         <NavLink key={name} link={link} name={name} />
                     ))}
                 </nav>
-                <Button asChild className='hidden lg:block lg:text-lg'>
-                    <Link href={""}>Contact us</Link>
-                </Button>
+                <div className='flex items-center justify-center'>
+                    <Button asChild className='hidden lg:block lg:text-lg'>
+                        <Link href={""}>Contact us</Link>
+                    </Button>
+                    <ThemeToggler />
+                </div>
                 <button className="lg:hidden" onClick={toggleMenu}>
-                    {isMenuOpen ? <IoClose  size={24} /> : <BiMenu size={24} />}
+                    {isMenuOpen ? <IoClose size={24} /> : <BiMenu size={24} />}
                 </button>
             </div>
             {isMenuOpen && (
