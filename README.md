@@ -10,6 +10,7 @@ This is a frontend template built with **Next.js**, styled with **Tailwind CSS**
 - **ShadCN UI**: Pre-built accessible components to speed up UI creation.
 - **EmailJS**: Send emails directly from the frontend with no backend required.
 - **React CountUp**: Animated number counting effect.
+- **Embla JS**: An interactive carousel slider.
 - **Next Themes**: Dark mode/light mode toggling with theme persistence.
 
 ## Getting Started
@@ -53,6 +54,10 @@ Dark mode is supported using **next-themes**. To switch between light and dark t
 ### EmailJS Integration
 
 Send emails from forms with **EmailJS**. Simply configure your EmailJS service, template, and public keys in your environment variables.
+
+### Interactive Carousel
+
+A countinuous slider.
 
 ### Animated CountUp
 

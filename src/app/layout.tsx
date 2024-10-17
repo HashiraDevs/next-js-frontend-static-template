@@ -11,10 +11,8 @@ const firaSans = Fira_Sans({
   subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-  title: siteConfig.name,
-  description: siteConfig.description,
-};
+
+export const metadata: Metadata = siteConfig.nextMetada;
 
 const RootLayout = ({
   children,
